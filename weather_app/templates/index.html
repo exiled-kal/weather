@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Weather App</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css"
-    />
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+</head>
+
+<body>
+  <div id="openweathermap-widget-11">
+    <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+    <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push({ id: 11, cityid: '5391959', appid: '88021bd11f5fd1d6c686710dd816165c', units: 'imperial', containerid: 'openweathermap-widget-11', }); (function () { var script = document.createElement('script'); script.async = true; script.charset = "utf-8"; script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();
+
+    </script>
     <section class="hero is-primary">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            What's the weather like?
+            Welcome to my Weather App
           </h1>
         </div>
       </div>
@@ -51,10 +54,7 @@
               <article class="media">
                 <div class="media-left">
                   <figure class="image is-50x50">
-                    <img
-                      src="http://openweathermap.org/img/w/{{city_weather.icon}}.png"
-                      alt="Image"
-                    />
+                    <img src="" alt="Image" />
                   </figure>
                 </div>
                 <div class="media-content">
@@ -62,9 +62,7 @@
                     <p>
                       <span class="title">{{ city_weather.city }}</span>
                       <br />
-                      <span class="subtitle"
-                        >{{ city_weather.temperature }}° F</span
-                      >
+                      <span class="subtitle">{{ city_weather.temperature }}° F</span>
                       <br />
                       {{ city_weather.description }}
                     </p>
@@ -83,7 +81,9 @@
           </div>
         </div>
       </div>
-    </section>
-    <footer class="footer"></footer>
-  </body>
+  </div>
+  </section>
+  <footer class="footer"></footer>
+</body>
+
 </html>
