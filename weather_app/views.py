@@ -24,7 +24,7 @@ def index(request):
                 if r['cod'] == 200:
                     form.save()
                 else:
-                    err_msg = 'City does not exist in the world!'
+                    err_msg = 'Invalid City name!'
             else:
                 err_msg = 'City already exists in the database!'
 
@@ -44,6 +44,7 @@ def index(request):
     for city in cities:
 
         r = requests.get(url.format(city)).json()
+        print(r)
 
         city_weather = {
             'city': city.name,
@@ -67,4 +68,4 @@ def index(request):
 def delete_city(request, city_name):
     City.objects.get(name=city_name).delete()
 
-    return redirect('home')
+    return redirect('index')
