@@ -15,7 +15,7 @@
 
 
   <div id="openweathermap-widget-11">
-    <script src="{%static '//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'%}"></script>
+    <script src="//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
 
 
     <section class="hero is-primary">
@@ -24,7 +24,7 @@
         <div class="container">
 
           <h1 class="title">
-            Welcome to my Weather forecast station
+            Welcome to my current Weather Station
           </h1>
         </div>
       </div>
@@ -38,6 +38,7 @@
               {% csrf_token %}
               <div class="field has-addons">
                 <div class="control is-expanded">
+                
                   {{ form.name }}
                 </div>
                 <div class="control">
@@ -68,7 +69,7 @@
               <article class="media">
                 <div class="media-left">
                   <figure class="image is-50x50">
-                    <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
+                    <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
                   </figure>
                 </div>
                 <div class="media-content">

@@ -4,6 +4,7 @@ from .models import City
 from .forms import CityForm
 
 
+
 def index(request):
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=88021bd11f5fd1d6c686710dd816165c'
 
@@ -32,7 +33,7 @@ def index(request):
             message = err_msg
             message_class = 'is-danger'
         else:
-            message = 'City added successfully!'
+            message = 'Corona virus update : Please take precaution when you go out!'
             message_class = 'is-success'
 
     form = CityForm()
